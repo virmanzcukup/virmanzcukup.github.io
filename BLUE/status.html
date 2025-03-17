@@ -1,0 +1,236 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Title-->
+    <title>status</title>    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Core Stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/status.css">
+</head>
+<style>
+ 
+</style>
+  <body>
+  
+    <!-- Header Area-->
+    <div class="header-area" id="headerArea">
+      <div class="container">
+        <div class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
+          <div class=""><a href="#"><img src="img/logo2.png" width="50" ></a></div>
+          <a href="#" class="click blink btn-sm btn-danger" class=""> Expired User</a>
+          <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="darkSwitch">
+              </div>
+        </div>
+      </div>
+    </div>
+  
+   
+    
+    <div class="page-content-wrapper">
+      <!-- Hero Slides-->
+      <div class="owl-carousel-one owl-carousel">
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide " style="background-image: url('img/1.jpg')">
+          <div class="slide-content h-100 d-flex align-items-center text-center">
+        
+          </div>
+        </div>
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide " style="background-image: url('img/2.jpg')">
+          <div class="slide-content h-100 d-flex align-items-center text-center">
+          </div>
+        </div>
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide " style="background-image: url('img/3.jpg')">
+          <div class="slide-content h-100 d-flex align-items-center text-center">
+          </div>
+        </div>
+        <!-- Single Hero Slide-->
+        <div class="single-hero-slide " style="background-image: url('img/4.jpg')">
+          <div class="slide-content h-100 d-flex align-items-center text-center">
+          </div>
+        </div>
+      </div>
+     
+
+      <div class="card service-card mb-3" style="background-image: linear-gradient(to bottom, #000428, #004e92);">
+          <div class="card-body">
+            <div class="d-flex align-items-center">
+              <div class="service-text">
+                <h5>$(username) Connection</h5>
+                <p class="mb-0">Selamat Menikmati Layanan Internet Kami.</p>
+              </div>
+              <div class="service-img"><img src="img/web.svg" width="70"></div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="chat-user-status-slides owl-carousel">
+          <!-- Single Status Slide-->
+          <div class="user-status-slide">
+            <a href="https://www.google.com/"><img src="img/chrome.svg " alt=""></a></div>
+            <div class="user-status-slide">
+            <a href="https://www.youtube.com/"><img src="img/yt.svg" alt=""></a></div>
+            <div class="user-status-slide">
+            <a href="https://www.facebook.com/"><img src="img/fb.svg" alt=""></a></div>
+             <div class="user-status-slide">
+            <a href="https://www.instagram.com/"><img src="img/ig.svg" alt=""></a></div>
+             <div class="user-status-slide">
+            <a href="https://www.telegran.org/"><img src="img/tel.svg" alt=""></a></div>
+             <div class="user-status-slide">
+            <a href="https://web.whatsapp.com/"><img src="img/wa.svg" alt=""></a></div>
+        </div>
+
+        <div class="card product-details-card mb-3 direction-rtl">
+          <div class="card-body">
+            <form action="#">
+              <div class="input-group">
+                <div class="input-group-text form-control" type="number" value="1">Download : $(bytes-out-nice)</div>
+                <div class="input-group-text form-control" type="number" value="1">Upload : $(bytes-in-nice)</div>
+              </div>
+            </form><hr>
+            <div class="checkout-wrapper-area">
+              <div class="card">
+                <div class="card-body checkout-form">
+                  <form>
+                    <div class="form-group">
+                      <div class="form-control mb-3" type="text">Ip address : $(ip)</div>
+                    </div>  
+                    <div class="form-group">
+                      <div class="form-control mb-3" type="text">Mac Address : $(mac)</div>
+                    </div>  
+                    <div class="form-group">
+                      <div class="form-control mb-3" type="text">terkoneksi : $(uptime)</div>
+                    </div>  
+                    <div class="form-group">
+                      <div class="form-control mb-3" type="text">Refres : $(refresh-timeout)</div>
+                    </div> 
+                     <div class="form-group">
+                      <div class="form-control mb-3" type="text">Sisa waktu : $(if session-time-left) $(session-time-left)
+                       $(else)
+                       Unlimited
+                       $(endif)
+                         </div>
+                    </div> 
+                    <div class="form-group">
+                      <div class="form-control mb-3" type="text">Sisa Kouta : $(if remain-bytes-total) $(remain-bytes-total-nice)
+                         $(else)
+                            Unlimited
+                          $(endif)
+                      </div>
+                    </div>
+                   
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+      </div>
+      <div class="popup_box">
+      <i class="fas fa-exclamation"></i>
+      <h6>Masa berlaku Voucher anda  </h6>
+      <div style="text-align:center;"><frameset  >
+        <iframe height="30"   title="Iframe Example" velue="tes" id="exp"  src="http://.unetz.my.id/status/status.php?name=$(username)&session=deaesports" frameborder="0"></iframe>
+      </frameset></div>
+      <div>
+        <a href="#" class="btn1">Close</a>
+      </div>
+    </div>
+    <!-- Footer Nav-->
+      <div  id="footerNav"  >
+        <div class="container px-0">
+          <!-- Paste your Footer Content from here-->
+          <!-- Footer Content-->
+          <div class="footer-nav position-relative" >
+            <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
+              <li><a href="voucher.html"><img src="img/voucher.svg" width="30"><span>Voucher</span></a></li>
+              <li><a href="releser.html"><img src="img/pedagang.svg" width="30"><span>Info</span></a></li>
+               $(if login-by-mac != 'yes')
+              <li><a href="$(link-logout)"><img src="img/off.svg" width="30"><span>Logout</span></a></li>
+              $(endif)
+            </ul>
+          </div>
+        </div>
+      </div>
+
+   <script>
+           document.getElementByid('title').innerHTML = window.location.hostname + " > status ";
+      // get validiti
+      var usr = document.getElementByid('user') = .innerHTML
+      var url = "http://.unetz.my.id/status/status.php?name=" ;
+      var SessionName = "deaesports"
+      var getvalid = url+usr+"& session="+SessionName
+      document.getElementByid('exp').src = getvalid;
+   </script>
+    <!-- All JavaScript Files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/dark-mode-switch.js"></script>
+    <script src="js/active.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.click').click(function(){
+          $('.popup_box').css("display", "block");
+        });
+        $('.btn1').click(function(){
+          $('.popup_box').css("display", "none");
+        });
+        $('.btn2').click(function(){
+          $('.popup_box').css("display", "none");
+          alert("Account Permanently Deleted.");
+        });
+      });
+
+    </script>
+    <script>
+    var url = 'js/wa.js';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"",
+      "borderRadius":"25",
+      "marginLeft":"0",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":"INTERNET",
+      "brandSubTitle":"Online",
+      "brandImg":"img/cs.svg",
+      "welcomeText":"",
+      "welcomeText":"Welcome to internet. <br> <hr> ada yang bisa kami bantu ?",
+      "messageText":"haloo internet, saya butuh bantuan nih !",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Chat",
+      "borderRadius":"25",
+      "autoShow":true,
+      "phoneNumber":"xxxxxxxx"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
+  </body>
+
+
+</html>
