@@ -1,7 +1,7 @@
 body{
 	margin-top:0px;
 	padding:-5px;
-	background-color:black!important;
+	background:black;
 }
 .btn:focus,.btn:active
 {
