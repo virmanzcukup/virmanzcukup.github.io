@@ -38,11 +38,11 @@ body{text-align: center;margin-top:98px;color:#000;background-color:#fff;backgro
 
 /* atribut warna hover*/
 
-.blue.blue:hover{background:blue;color: white!important;transition: 0.7s;}
-.red.red:hover{background:red;color: white!important;transition: 0.7s;}
-.green.green:hover{background:green;color: white!important;transition: 0.7s;}
-.dark.dark:hover{background:#12142e;color: white!important;transition: 0.7s;}
-.yellow.yellow:hover{background:yellow;color: black!important;transition: 0.7s;}
+.blue.blue:hover{border-color:black!important;background:blue;color: white!important;transition: 0.7s;}
+.red.red:hover{border-color:black!important;background:red;color: white!important;transition: 0.7s;}
+.green.green:hover{border-color:black!important;background:green;color: white!important;transition: 0.7s;}
+.dark.dark:hover{border-color:black!important;background:#12142e;color: white!important;transition: 0.7s;}
+.yellow.yellow:hover{border-color:black!important;background:yellow;color: black!important;transition: 0.7s;}
 
 
 a:link{text-decoration:none;color:black!important}
