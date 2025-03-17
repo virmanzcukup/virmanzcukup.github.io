@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title id="title"></title>
+<link rel="icon" href="img/logo.png" />
+
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/vinesa.css" rel="stylesheet">
+<link href="css/roller.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 box-utama">
+<div class="row">
+<br>
+<center>
+<center> $(if login-by == 'trial')
+<font style="background-color: black; color: yellow ; font-size: 18px; box-shadow: 0px 0px 5px 5px red;"><b>𝓒𝓸𝓷𝓷𝓮𝓬𝓽𝓮𝓭</b></font><br></br>
+<font style="background-color: black; color: yellow ; font-size: 18px; box-shadow: 0px 0px 5px 5px red;" id="mac"><b>$(trial)</b></font><br></br>
+      $(elif login-by != 'mac')
+<font style="background-color: black; color: yellow ; font-size: 18px; box-shadow: 0px 0px 5px 5px red;"><b>𝓒𝓸𝓷𝓷𝓮𝓬𝓽𝓮𝓭</b></font><br></br>
+<font style="background-color: black; color: yellow ; font-size: 18px; box-shadow: 0px 0px 5px 5px red" id="user"><b>$(username)</b></font><br></br>
+    $(endif)
+<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+
+<div class="col-md-6 col-md-offset-3 col-sm-2 col-sm-offset-0 box-kedua">
+
+<center>
+    <div class="lds-roller"><div></div><div>
+	</div><div></div><div></div><div></div>
+	<div></div><div></div><div></div></div>
+</center>
+
+<table class="table table-bordered table-hover mr-b-10">
+<tr>
+<td align="left">
+<b><span class="glyphicon glyphicon-signal"></span> &nbsp; IP Modem</b></td>
+<td>: $(ip)</td>
+</tr>
+
+<tr>
+<td align="left">
+<b><span class="glyphicon glyphicon-qrcode"></span> &nbsp; Code </b></td>
+<td>: $(username)</td>
+</tr>
+
+<tr>
+<td align="left">
+<b><span class="glyphicon glyphicon-phone"></span> &nbsp; MAC </b></td>
+<td>: $(mac)</td>
+</tr>
+
+<tr>
+<td align="left"><font style="color: black" class="blink">
+<b><span class="glyphicon glyphicon-upload"></span> &nbsp; </font>Up </b></td>
+<td>:$(bytes-out-nice)</td>
+</tr>
+
+<tr>
+<td align="left"><font style="color: black" class="blink">
+<b><span class="glyphicon glyphicon-download"></span> &nbsp; </font>down </b></td>
+<td>: $(bytes-in-nice)</td>
+</tr>
+
+<tr>
+<td align="left"><font style="color: black" class="blink">
+<b><span class="glyphicon glyphicon-forward"></span> &nbsp; </font>Aktif </b></td>
+<td>: $(uptime)</td>
+</tr>
+
+$(if remain-bytes-total)
+
+<tr>
+<td align="left"><font style="color: black" class="blink">
+<b><span class="glyphicon glyphicon-time"></span> &nbsp; </font>Sisa Waktu </b></td>
+<td>: $(session-time-left)</td>
+</tr>
+
+$(endif)
+$(if blocked == 'yes')
+
+<tr>
+<td align="left"><font style="color: blue" class="blink">
+<b><span class="glyphicon glyphicon-play"></span> &nbsp; </font>Status </b></td>
+<td>: <font style="color: #FF8080" class="blink"><a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</font></td>
+</tr>
+
+$(elif refresh-timeout)
+
+<tr>
+<td align="left"><font style="color: red" class="blink">
+<b><span class="glyphicon glyphicon-refresh"></span> &nbsp; </font>Refresh </b></td>
+<td>: $(refresh-timeout)</td>
+</tr>
+</table>
+
+    $(if login-by-mac != 'yes')
+<center>
+<button type="submit" class="btn tombol-logout">
+		<span class="glyphicon glyphicon-off"></span>&nbsp; LOGOUT </button>
+</center>
+        $(endif)
+</form>
+<br>
+</div>
+</div>
+
+<br>
+<div id="gaya">
+  <span>
+<center>
+<a href="contact.html">
+<img src="img/menu.png" style="border-radius: 10px; width:100%; max-width:80px; height:auto;"></img>
+</a></center></span>
+</div>
+<br>
+
+<div class="row">
+<style>
+	.jadwal-shalat {
+	background:url(./img/jam1.jpg)repeat;
+	background-size:375px;
+	background-position:center;
+	color:white;
+	font-size: 15px;
+	font-weight: bold;
+border-radius :10px 10px 10px 10px;
+border: 2px solid black;
+width:100%;
+	box-shadow :5px 5px green
+	}
+	.shalat-closebtn{
+	  color: white;
+	  background: green;
+border-radius :0px 10px 0px 0px;
+border: 2px solid black;
+padding:1px;
+	  float: right;
+	  font-size: 28px;
+	  line-height: 17px;
+	  width: 25px;
+	  cursor: pointer;
+	  transition: 0.8s;
+	}	
+	.shalat-closebtn:hover {
+	  color: white;
+	  background: red;
+	box-shadow : 0px 0px 15px 5px red;
+border-radius :0px 10px 0px 0px;
+border: 2px solid yellow;
+	  cursor: pointer;
+	}
+	
+	.shalat-bg-primary{
+	background-color:#007bff!important;
+	padding: 5px;
+	border-radius: 6px;
+	margin-right: 5px;
+	}
+	
+	.shalat-label{display:inline-block;
+	margin-bottom:.5rem;
+	}
+	
+	.shalat-blink{display:inline-flex;width:20px;justify-content:center;}
+	.shalat-blink01{width:14px;height:14px;background-color:red;border: 2px solid yellow; 
+	box-shadow : 0px 0px 10px 6px yellow; border-radius:50%;}
+	.shalat-blink02{-webkit-animation:blinking 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;animation:blinking 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;}
+	::-webkit-input-placeholder{color:#888;}
+	:-moz-placeholder{color:#888;}
+	::-moz-placeholder{color:#888;}
+	:-ms-input-placeholder{color:#888;}
+	@media only screen and (max-width: 600px){
+	.header .shalat-blink{width:10px;}
+	.header .shalat-blink .shalat-blink01{width:10px;height:10px;}
+	}
+	@-webkit-keyframes blinking{from{opacity:1;}to{opacity:0;}}
+	@keyframes blinking{from{opacity:1;}to{opacity:0;}}	
+</style>
+	<!--begin jadwal sholat-->
+
+<script type="text/javascript" src="js/PrayTimes.js"></script>
+<div class="jadwal-shalat">
+	<span class="shalat-closebtn" onclick="this.parentElement.style.display='none';"><b>&times;</b></span> 
+	
+    <font style="background : green;border-radius: 10px 0px 0px 0px; padding: 2px; border: 2px solid black;color: white; font-size: 15px">
+	Jadwal Sholat, lebak & sekitarnya
+	</font><br>
+    <font style="background : green;border: 1px solid black;color: white; font-size: 15px">
+	<script language='JavaScript'>document.write(tanggallengkap)</script>
+	
+<strong id="shalat-info">
+	<span class="shalat-blink">
+	<i class="shalat-blink01 shalat-blink02"></i>
+	</span>&nbsp;
+</strong>
+	</font></br>
+
+<div align="center" id="table">
+<script type="text/javascript">
+     var date = new Date(); // Cek Lokasi nya : https://latitudelongitude.org
+     prayTimes.tune( {imsak: 2,subuh: 2, dzuhur: 2, ashar: 2, maghrib: 2, isya: 2} );
+     var times = prayTimes.getTimes(new Date(), [-6.18, 106.63, 10], +7);
+	 //untuk ganti lokasi anda
+     var list = ['imsak','Isya','Subuh' ,'dzuhur' ,'Ashar' ,'Maghrib'];
+     var html = '<table id="timetable">';
+	 html += '<tr><th colspan="2">'+'</th></tr>';
+       for(var i in list)    {
+    html += '<tr><td>'+ list[i]+ '</td>';
+    html += '<td>'+ times[list[i].toLowerCase()]+ '</td></tr>';
+       }
+    html += '</table>';
+    document.getElementById('table').innerHTML = html;
+</script>
+</div>
+</div>
+<!--end jadwal sholat-->
+
+
+</div>
+</div>
+</div>
+<center><div class="footer text-center">
+<font style="font-family : Arial; background: white; color: green; font-size: 12px font-weight: bold">
+Copyright <!--Tolong jangan di hapus tanpa se ijin pemilik-->virnie cellular
+<!--jika di hapus saya akan denda--> &copy; 2021</font></div></center>
+
+
+</body>
+</html>

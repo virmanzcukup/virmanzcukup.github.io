@@ -1,0 +1,23 @@
+
+#blink {
+text-align:left;
+font-weight: bold;
+margin: 0 auto;
+padding:2px;
+border: 2px solid red;
+page: center;
+width: 200px;
+border-radius :20px 20px;
+}
+
+#blink img:hover {
+background-color:red;
+border-radius :20px 20px;
+padding:2px;
+font-size:15px;
+font-weight: bold;
+border: 2px solid yellow;
+width: 250px;
+font-family: arial;
+box-shadow : 0 0 70px red;
+}
