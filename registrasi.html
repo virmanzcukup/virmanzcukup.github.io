@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="icon" href="img/logo.png" />
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="chrome">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="fonts/fontawesome.min.css" rel="stylesheet">
+<link href="css/animated.css" rel="stylesheet">
+<link href="css/vcnetstyle.css" rel="stylesheet">
+
+</head>
+<!--top border-->
+<body style="margin-top: 0px">
+<div class="container">
+<center>
+<div class="col-md-8 col-md-offset-2 col-sm-0 col-sm-offset-2" style="padding:40px;">
+	<div class="animate__animated animate__zoomIn tabel-registrasi"><svg xmlns="http://www.w3.org/2000/svg" height="32" width="36" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#00040a" d="M357.7 8.5c-12.3-11.3-31.2-11.3-43.4 0l-208 192c-9.4 8.6-12.7 22-8.5 34c87.1 25.3 155.6 94.2 180.3 181.6L464 416c26.5 0 48-21.5 48-48l0-112 32 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8.1-35.2l-208-192zM288 208c0-8.8 7.2-16 16-16l64 0c8.8 0 16 7.2 16 16l0 64c0 8.8-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16l0-64zM24 256c-13.3 0-24 10.7-24 24s10.7 24 24 24c101.6 0 184 82.4 184 184c0 13.3 10.7 24 24 24s24-10.7 24-24c0-128.1-103.9-232-232-232zm8 256a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM0 376c0 13.3 10.7 24 24 24c48.6 0 88 39.4 88 88c0 13.3 10.7 24 24 24s24-10.7 24-24c0-75.1-60.9-136-136-136c-13.3 0-24 10.7-24 24z"/></svg>
+	<b> REGISTRASI</b>
+
+
+<br>
+		<div class="panel-collapse ">
+<br>
+	
+	<form id="EmailForm3" action="javascript:aktipasi();" name="EmailForm" class="text-center" >
+		
+			<div class="form-group"><label><b>Pilih Paket</b></label>
+<select id="paket3" class="form-control" required>
+					<option value="" selected>- pilih paket -</option>
+				<hr><optgroup label="Pribadi / Rumahan"></hr>
+					<option value="Pribadi 5.mbps = Rp.150.000">5.mbps = Rp.150.000 </option>
+					<option value="Pribadi 10.mbps = Rp. 270.000 ">10.mbps = Rp. 270.000 </option>
+					<option value="Pribadi 15.mbps = Rp. 380.000 ">15.mbps = Rp. 380.000 </option>
+				</optgroup>
+				<hr><optgroup label="Member"></hr>
+					<option value="Member 2.hp = Rp. 110.000 ">2.hp = Rp. 110.000 </option>
+				<option value="Member 3.hp = Rp. 140.000 ">3.hp = Rp. 140.000 </option>
+				<option value="Member 4.hp = Rp. 170.000 ">4.hp = Rp. 170.000 </option>
+				</optgroup>
+</select>
+			</div>
+
+	 <input id="nama3" class="form-control" type="text" placeholder="Nama" pattern="[A-z\s]{4,20}" required title="isi sesuai nama"/>
+	
+	  <input id="alamat3" class="form-control" type="text" placeholder="Lokasi" pattern="[A-z\s]{5,20}" required title="masukan alamat yang sesuai"/>
+	 
+      <input id="nomor3" class="form-control" type="text" placeholder="No. hp" pattern="[0-9]{11,13}" required title="masukan nomor hp yg sesuai, mulai dari angka '08'" />
+	 
+	
+    <input type="checkbox" required /> 
+	
+	
+	
+	
+	<a href="vcnet.html">
+	<button type="button" class="tombol-transparan"><u>Saya setuju <br> dengan syarat &amp; ketentuan </u></button></a><br>
+			<b><i style="text-shadow: #afaeae 2px 5px 5px">" vc.net "</i></b>
+	  <br>
+	  <br>
+	  		<a href="index.html">
+	  <button type="button" class="tombol yess"><b>Tidak</b></button></a>
+	  <button type="submit" class="tombol yess"><b>Kirim</b></button>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+
+
+<br>
+
+
+
+
+<div id="confirm" class="modal animate__animated animate__zoomIn" style="--animate-duration:1s"role="dialog" data-backdrop="static">
+<div class="modal-dialog center">
+			<div class="tabel-registrasi2" style="text-align:center">
+	<i class="icon-harga icon15 fa fa-check-square-o"></i> Permintaan Registrasi Terkirim
+	<span class="jam icon-harga"></span>&nbsp; 
+	<br>
+	Silahkan lanjutkan pembayaran, agar permintaan dapat di proses dengan cepat.
+	<br>Terimakasih !
+	
+<br> 
+<br> 
+<center>
+	  		<a href="aktivasi.html">
+	  <button type="button" class="tombol yess"><b>lanjutkan</b></button></a>
+<br> 
+<br> 
+</div>
+</div>
+</div>
+			
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+<script src="js/signup.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
