@@ -1,10 +1,10 @@
 
 function kasbonvoucher(){
 // chat_id = "isi chat_id Anda";
-chat_id = "1415639213";
+chat_id = "xxxxxxxx";
 // token = "isi token Anda";
-token = "2071961335:AAEdNbKggzXkZ8yXBKgzn2U_BQnwZHWJ0LY";
-message = "<b>permintaan kasbon voucher wifi burunuk</b>%0Anama : "+ $("#nama").val() + "%0Aalamat : " + $("#alamat").val() + "%0Ano. hp : " + $("#nomor").val() + "%0Avoucher : " + $("#paket").val() ;
+token = "xxxxxxxxxxxx";
+message = "<b>permintaan kasbon voucher wifi </b>%0Anama : "+ $("#nama").val() + "%0Aalamat : " + $("#alamat").val() + "%0Ano. hp : " + $("#nomor").val() + "%0Avoucher : " + $("#paket").val() ;
 $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id+"&parse_mode=html");
 $("#EmailForm").parent().hide();
 $("#confirm").show();
@@ -12,10 +12,10 @@ $("#confirm").show();
 
 function keluhan(){
 // chat_id = "isi chat_id Anda";
-chat_id = "1415639213";
+chat_id = "xxxxxxxx";
 // token = "isi token Anda";
-token = "2071961335:AAEdNbKggzXkZ8yXBKgzn2U_BQnwZHWJ0LY";
-message = "<b>Saran dan keluhan wifi burunuk</b>%0Anama : "+ $("#nama1").val() + "%0Ano. hp : " + $("#nomor1").val() + "%0Aisi pesan : " + $("#pesan").val();
+token = "xxxxxxxxxxxx";
+message = "<b>Saran dan keluhan wifi</b>%0Anama : "+ $("#nama1").val() + "%0Ano. hp : " + $("#nomor1").val() + "%0Aisi pesan : " + $("#pesan").val();
 $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id+"&parse_mode=html");
 $("#EmailForm").parent().hide();
 $("#confirm").show();
@@ -23,10 +23,10 @@ $("#confirm").show();
 
 function registrasi(){
 // chat_id = "isi chat_id Anda";
-chat_id = "1415639213";
+chat_id = "xxxxxxxx";
 // token = "isi token Anda";
-token = "2071961335:AAEdNbKggzXkZ8yXBKgzn2U_BQnwZHWJ0LY";
-message = "<b>permintaan pasang wifi burunuk</b>%0Anama : "+ $("#nama2").val() + "%0Aalamat : " + $("#alamat").val() + "%0Ano. hp : " + $("#nomor2").val() + "%0Apaket : " + $("#paket").val();
+token = "xxxxxxxxxxxx";
+message = "<b>permintaan pasang wifi </b>%0Anama : "+ $("#nama2").val() + "%0Aalamat : " + $("#alamat").val() + "%0Ano. hp : " + $("#nomor2").val() + "%0Apaket : " + $("#paket").val();
 $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id+"&parse_mode=html");
 $("#EmailForm2").parent().hide();
 $("#confirm").show();
@@ -34,9 +34,9 @@ $("#confirm").show();
 
 function aktipasi(){
 // chat_id = "isi chat_id Anda";
-chat_id = "1415639213";
+chat_id = "xxxxxxxx";
 // token = "isi token Anda";
-token = "2071961335:AAEdNbKggzXkZ8yXBKgzn2U_BQnwZHWJ0LY";
+token = "xxxxxxxxxxxx";
 message = "<b>permintaan registrasi internet</b>%0Anama : "+ $("#nama3").val() + "%0Aalamat : " + $("#alamat3").val() + "%0Ano. hp : " + $("#nomor3").val() + "%0Apaket : " + $("#paket").val();
 $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id+"&parse_mode=html");
 $("#EmailForm3").parent().hide();
@@ -45,16 +45,16 @@ $("#confirm").show();
 
 function jasaservice(){
 // chat_id = "isi chat_id Anda";
-chat_id = "1415639213";
+chat_id = "xxxxxxxx";
 // token = "isi token Anda";
-token = "2071961335:AAEdNbKggzXkZ8yXBKgzn2U_BQnwZHWJ0LY";
-message = "<b>permintaan Jasa service burunuk</b>%0Anama : "+ $("#nama").val() + "%0Aalamat : " + $("#alamat").val() + "%0Ano. hp : " + $("#nomor").val() + "%0A service : " + $("#service").val();
+token = "xxxxxxxxxxxx";
+message = "<b>permintaan Jasa service</b>%0Anama : "+ $("#nama").val() + "%0Aalamat : " + $("#alamat").val() + "%0Ano. hp : " + $("#nomor").val() + "%0A service : " + $("#service").val();
 $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id+"&parse_mode=html");
 $("#EmailForm").parent().hide();
 $("#confirm").show();
 }
 
-    window.intergramId = "1415639213";
+    window.intergramId = "xxxxxxxxxx";
     window.intergramCustomizations = {
         titleClosed: 'Chat Live',
         titleOpen: 'vc net',
