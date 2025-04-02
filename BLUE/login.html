@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/border.css">
+    <link rel="stylesheet" href="alert.css">
+  </head>
+  <body>
+    <script>
+      
+      if (localStorage.getItem("mode")==1) {
+          document.addEventListener('DOMContentLoaded', () => {
+          let btn = document.querySelector('#sign-up-btn');
+          btn.addEventListener('click', () => {
+          container.classList.add("sign-up-mode");
+          mode=1;
+          localStorage.setItem("mode", mode);
+          }, false);
+          btn.click();
+        }, false);
+      }
+    </script>
+    $(if chap-id)
+      <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+      </form>
+      
+      <script type="text/javascript" src="md5.js"></script>
+      <script type="text/javascript">
+          function doLogin() {
+            if(mode==0){
+              console.log("ini mode voucher");
+              document.sendin.username.value = document.login.username.value;
+              document.sendin.password.value = hexMD5('$(chap-id)' + document.login.username.value + '$(chap-challenge)');
+            }else{
+              console.log("ini mode member");
+              document.sendin.username.value = document.login2.username.value;
+              document.sendin.password.value = hexMD5('$(chap-id)' + document.login2.password.value + '$(chap-challenge)');
+            }
+            document.sendin.submit();
+            return false;
+          }
+      </script>
+    $(endif)
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+
+          <form autocomplete="off" name="login" action="$(link-login-only)" method="post"
+          $(if chap-id) onSubmit="return doLogin()" $(endif) class="sign-in-form">
+          <input type="hidden" name="dst" value="$(link-orig)" />
+          <input type="hidden" name="popup" value="true" />
+            <h2 class="title">Login</h2>
+            <div class="input-field">
+              <img src="img/pass.svg" width="40" style="padding-top: 7px;">
+              <input type="text" placeholder="Code Voucher" name="username"/>
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <a onclick="window.location='https://laksa19.github.io/myqr';">
+            <img src="img/qr.svg" width="50">
+            </a>
+            <p class="social-text">Contact Us</p>
+            <div class="social-media">
+              <a href="https://wa.me/+08xxxxxx" class="social-icon">
+                <img src="img/wa.svg" width="50">
+              </a>
+              <a href="https://t.me./+08xxxxxxs" class="social-icon">
+                <img src="img/tel.svg" width="50">
+              </a>
+              <a href="tell++08xxxxxx" class="social-icon">
+                <img src="img/call.svg" width="50">
+              </a>
+            </div>
+          </form>
+          $(if error)
+          <div class="alert alert-danger">
+          <!-- <span class="icon"> -->
+              <img src="img/err.svg" alt="" width="30">
+          </span>
+      
+          <div class="text">
+              <strong style="color: red;">$(error)</strong>
+          </div>
+      
+          <button class="close">
+              <img src="img/er.svg" alt="" width="30">
+          </button>
+          </div>
+          $(endif)
+          <form autocomplete="off" name="login2" action="$(link-login-only)" method="post"
+          $(if chap-id) onSubmit="return doLogin()" $(endif) class="sign-up-form">
+            <h2 class="title">Login</h2>
+            <div class="input-field">
+              <img src="img/user.svg" width="40" style="padding-top: 7px;">
+              <input type="text" placeholder="Username" name="username"/>
+            </div>
+            <div class="input-field">
+              <img src="img/pass.svg" width="40" style="padding-top: 7px;">
+              <input type="password" placeholder="Password" name="password"/>
+            </div>
+            <input type="submit" class="btn" value="Login" />
+            <a onclick="window.location='https://laksa19.github.io/myqr';">
+            <img src="img/qr.svg" width="50">
+            </a>
+            <p class="social-text">Contact Us</p>
+            <div class="social-media">
+              <a href="https://wa.me/+6282127111751" class="social-icon">
+                <img src="img/wa.svg" width="50">
+              </a>
+              <a href="https://t.me./" class="social-icon">
+                <img src="img/tel.svg" width="50">
+              </a>
+              <a href="tell++6282127111751" class="social-icon">
+                <img src="img/call.svg" width="50">
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="box panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <!-- <img src="img/logo2.png" width="50"><br> -->
+             <h6 style="font-size: 30px;">INTERNET</h6>
+            <center>
+            <hr width="120">
+            </center> 
+            <p>
+              Gunakan internet dengan bijak dan jangan lupa untuk beristirahat.
+            </p>
+            <button class="gradient-border button-anon-pen btn transparent" id="sign-up-btn">
+              Login member
+            </button>
+          </div>
+          
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+             <!-- <img src="img/logo2.png" width="50"><br> -->
+            <h6 style="font-size: 30px;">INTERNET</h6>
+            <center>
+            <hr width="120">
+            </center> 
+            <p>
+              Gunakan internet dengan bijak dan jangan lupa untuk beristirahat.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Login Voucher
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sign_in_btn = document.querySelector("#sign-in-btn");
+      const sign_up_btn = document.querySelector("#sign-up-btn");
+      const container = document.querySelector(".container");
+      var mode=0;
+
+      sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+        mode=1;
+        localStorage.setItem("mode", mode);
+        // console.log(mode);
+      });
+
+      sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+        mode=0;
+        localStorage.setItem("mode", mode);
+        // console.log(mode);
+      });
+
+      function voucher(){
+        container.classList.add("sign-up-mode");
+      }
+      function member(){
+        container.classList.remove("sign-up-mode");
+      }
+    </script>
+    <script>
+      let alert_close_icons = document.querySelectorAll('.alert>.close');
+if (alert_close_icons) {
+    alert_close_icons.forEach((alert_close_icon) => {
+        alert_close_icon.addEventListener('click', function () {
+            this.closest('.alert').classList.add('close');
+
+            this.closest('.alert').addEventListener('transitionend', function (event) {
+                if (event.propertyName == 'transform') {
+                    this.remove();
+                }
+            });
+        });
+    });
+}
+    </script>
+  </body>
+</html>
