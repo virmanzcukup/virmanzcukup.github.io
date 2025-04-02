@@ -1,0 +1,406 @@
+body{
+	margin-top:0px;
+	padding:-5px;
+	background:black;
+}
+.btn:focus,.btn:active
+{
+	outline:none!important;
+	box-shadow:false
+}
+.btn:hover
+{
+box-shadow : 0px 0px 20px 10px red;
+background:red;
+border: 2px solid yellow;
+	color:#fff;
+}
+.kolom-input
+{
+	font-size:15px;
+	font-weight:100%;
+	margin-bottom:5px;
+	border-radius:2px!important;
+	width:100%
+}
+.kolom-inputdsuser
+{
+	border:2px #4AA9C1 solid;
+	color:yellow;
+	background:#0F3B46;
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:5px;
+	border-radius:2px!important;
+	width:100%
+}
+.kolom-inputdspass
+{
+	border:2px #4AA9C1 solid;
+	color:yellow;
+	background:#0F3B46;
+	font-size:15px;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:5px;
+	border-radius:2px!important;
+	width:100%
+}
+.box-utama
+{
+	margin-top:0px;
+	background:url(../bg.jpg)repeat;
+	background-size:100%;
+	background-position:top;
+	border:3px solid green;
+	border-radius:1px;
+	background-color:#fff;
+}
+.box-kedua
+{
+	margin-top:0px;
+	border:3px solid green;
+	background-color:#fff
+}
+.box-transparent
+{
+	border:3px solid #8e43e7;
+	border-radius:0px;
+	background-color: transparent
+}
+.tombol-logout
+{
+	background: url(../img/jam1.jpg)no-repeat;
+	background-position: top; 
+	background-size: 100%;
+	width:100%;
+	white-space:nowrap;
+	border:2px solid green;
+	border-radius: 10px 10px 10px 10px;
+	color:yellow!important;
+	height:40px;
+	font-size:15px;
+	font-weight:600;
+	margin-top:3px
+}
+.tombol-login
+{
+	background:#ad0c00;
+	width:100%;
+	white-space:nowrap;
+	border:2px solid green;
+	border-radius: 0px 0px 10px 10px;
+	color:#fff!important;
+	height:40px;
+	font-size:15px;
+	font-weight:600;
+	margin-top:3px
+}
+.tombol-voucher
+{
+	width:49%;
+	white-space:nowrap;
+	border:1px solid #fff;
+	border-radius:10px 10px 0px 0px;
+	color:#fff!important;
+	font-size:12px;
+	font-weight:600;
+	margin-top:3px
+}
+.tombol-qr
+{
+	width:49%;
+	white-space:nowrap;
+	border:1px solid #fff;
+	border-radius:10px 10px 0px 0px;
+	color:#fff!important;
+	font-size:12px;
+	font-weight:600;
+	margin-top:3px
+}
+.tombol-member
+{
+	width:49%;
+	white-space:nowrap;
+	border:1px solid #fff;
+	border-radius:10px 10px;
+	color:#fff!important;
+	font-size:12px;
+	font-weight:600;
+	margin-top:3px
+}
+.tombol-khusus
+{
+	width:100%;
+	white-space:nowrap;
+	border:2px #fff solid;
+	background:#0F3B46;
+	border-radius:0px 0px;
+	color:#fff!important;
+	height:100%
+}
+.tombol-note
+{
+	width:100%;
+	white-space:nowrap;
+	border:2px #4AA9C1 solid;
+	background:black;
+	border-radius:0px 0px;
+	color:#fff!important;
+	height:100%
+}
+.tombol-paket
+{
+	width:80%;
+	white-space:nowrap;
+	border:none;
+	border-radius:4px;
+	color:#fff!important;
+	font-size:14px;
+	font-weight:600;
+	margin-top:5px;
+	margin-bottom:-16px
+}
+.tombol-wa
+{
+	width:49%;
+	white-space:nowrap;
+	border:1px solid #fff;
+	border-radius:10px 0px 0px 0px;
+	color:#fff!important;
+	font-size:12px;
+	font-weight:100%;
+	margin-top:3px
+}
+.tombol-phone
+{
+	width:49%;
+	white-space:nowrap;
+	border:1px solid #fff;
+	border-radius:0px 10px 0px 0px;
+	color:#fff!important;
+	font-size:12px;
+	font-weight:100%;
+	margin-top:3px
+}
+.tombol-sms
+{
+	width:49%;
+	white-space:nowrap;
+	border:1px solid #fff;
+	border-radius:0px 0px 0px 0px;
+	color:#fff!important;
+	font-size:12px;
+	font-weight:100%;
+	margin-top:3px
+}
+.menu{
+	width:49%;
+	background: url(../img/jam1.jpg)no-repeat;
+	background-position: top; 
+	background-size: 100%;
+	padding: 8px;
+	color:#fff!important;
+	font-size:15px;
+	border-radius: 0px 10px 0px 10px;
+	box-shadow: 5px 5px green;
+	text-align: center
+}
+a:link
+{
+	text-decoration:none;
+	color:#007ee5
+}
+a:visited
+{
+	text-decoration:none;
+	color:#007ee5
+}
+a:hover
+{
+	text-decoration:none;
+	color:#007ee5
+}
+a:active
+{
+	text-decoration:none;
+	color:#007ee5
+}
+.panel-title
+{
+	color:#fff;
+	font-weight:700;
+	font-size:20px
+}
+.panel
+{
+	text-align:center
+}
+.panel:hover
+{
+box-shadow : 0px 0px 20px 10px blue;
+border: 3px solid green;
+    opacity: 1;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	transition:all 0.3s ease
+}
+.panel-body
+{
+	padding:0;
+	text-align:center
+}
+.the-price
+{
+	padding:24px;
+	margin:0;
+	font-size:30px;
+	color:#fff;
+	font-weight:600
+}
+.the-price h1
+{
+	line-height:1em;
+	padding:0;
+	margin:0;
+	font-size:30px
+}
+.subscript
+{
+	font-size:25px
+}
+.rupiah:before
+{
+	content:'Rp.';
+	font-size:.4em;
+	vertical-align:top
+}
+.bawah-logo
+{
+	font-size:75%;
+	text-align:center;
+	margin-top:5px
+}
+
+.putih{background-color:#fff}
+.border-putih{border:2px solid #fff}
+.bg-putih{background-color:#fff!important; border:2px solid #fff!important}
+
+.hijau{background-color:#20bd1a}
+.border-hijau{border:2px solid #20bd1a}
+.bg-hijau{background-color:#20bd1a!important; border:2px solid #20bd1a!important}
+
+.hijaucream{background-color:#02cf8e}
+.border-hijaucream{border:2px solid #02cf8e}
+.bg-hijaucream{background-color:#02cf8e!important; border:2px solid #02cf8e!important}
+
+.ungu{background-color:#8e43e7}
+.border-ungu{border:2px solid #8e43e7}
+.bg-ungu{background-color:#8e43e7!important; border:2px solid #8e43e7!important}
+
+.kuning{background-color:#fdb813}
+.border-kuning{border:2px solid #fdb813}
+.bg-kuning{background-color:#fdb813!important; border:2px solid #fdb813!important}
+
+.orange{background-color:#fc6100}
+.border-orange{border:1px solid #fc6100}
+.bg-orange{background-color:#fc6100!important; border:1px solid #fc6100!important}
+
+.abutua{background-color:#666!important}
+.border-abutua{border:2px solid #3a3a3c}
+.bg-abutua{background-color:#3a3a3c!important;border:2px solid #3a3a3c!important}
+
+.pink{background-color:#ff00e6}
+.border-pink{border:2px solid #ff00e6}
+.bg-pink{background-color:#ff00e6!important; border:2px solid #ff00e6!important}
+
+.merah{background-color:red}
+.border-merah{border:2px solid red}
+.bg-merah{background-color:red!important; border:1px solid red!important}
+
+.merahtua{background-color:#ad0c00}
+.border-merahtua{border:1px solid #ad0c00}
+.bg-merahtua{background-color:#ad0c00!important; border:2px solid #ad0c00!important}
+
+.tosca{background-color:#71c6c1}
+.border-tosca{border:2px solid #71c6c1}
+.bg-tosca{background-color:#71c6c1!important; border:2px solid #71c6c1!important}
+
+.coklat{background-color:#8a7967}
+.border-coklat{border:2px solid #8a7967}
+.bg-coklat{background-color:#8a7967!important; border:2px solid #8a7967!important}
+
+.biru{background-color:blue}
+.border-biru{border:2px solid blue}
+.bg-biru{background-color:blue!important; border:2px solid blue!important}
+
+.birumuda{background-color:#009468}
+.biru-muda{background-color:#009468}
+.border-biru-muda{border:2px solid #009468}
+.bg-biru-muda{background-color:#009468!important; border:2px solid #009468!important}
+
+.birucream{background-color:#0099e6}
+.biru-cream{background-color:#0099e6}
+.border-biru-mudacream{border:2px solid #0099e6}
+.bg-biru-cream{background-color:#0099e6!important; border:2px solid #0099e6!important}
+
+.silver{background: #92959c}
+.border-silver{border:2px solid #92959c}
+.bg-silver{background-color:#92959c!important; border:2px solid #92959c!important}
+
+.gold{background: #ffc400}
+.border-gold{border:2px solid #ffc400}
+.bg-gold{background-color:#ffc400!important; border:2px solid #ffc400!important}
+
+.hitam{background: black}
+.border-hitam{border:2px solid black}
+.bg-hitam{background-color:black!important; border:2px solid black!important}
+
+.blink{animation:blink-animation 1s steps(2,start) infinite;
+-webkit-animation:blink-animation 0.8s steps(5,start) infinite
+}
+@keyframes blink-animation
+{to{visibility:hidden}}
+
+@-webkit-keyframes blink-animation
+{to{visibility:hidden}}
+@media(min-width:992px){body{margin-top:150px}}
+
+
+#gaya {
+	margin-left: 0px;
+	background:url(../img/jam.jpg)repeat;
+	background-size:100%;
+	background-position:top;
+text-align:center;
+font-weight: bold;
+margin: 0 auto;
+padding:2px;
+border: 3px solid green;
+position: center;
+height: 100%;
+width: 300px;
+border-radius :20px 20px 20px 20px
+}
+
+#gaya img:hover {
+background-color:red;
+border-radius :20px 20px 20px 20px;
+padding:2px;
+font-size:15px;
+font-weight: bold;
+border: 1px solid yellow;
+width: 250px;
+font-family: arial;
+box-shadow : 0px 0px 20px 10px red;
+}
+#timetable th {
+  padding:0px 80px;
+}
+
+
+
+#created-link {Copyright <!--Tolong jangan di hapus tanpa se ijin pemilik-->virnie cellular
+<!--jika di hapus saya akan denda--> &copy; 2021}
+

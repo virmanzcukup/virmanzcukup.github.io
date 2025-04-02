@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title></title>
+<link rel="icon" href="img/logo.png" />
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/vinesa.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+<div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 box-utama">
+<div class="row">
+
+<div class="col-md-4 col-sm-12" style="padding:10px;">
+<img class="logo" src="img/logo.png" alt="vinesa" style="margin-top: 0px; padding: 10px; width:100%; max-width: 350px; height:150px">
+<center>
+🔸
+<text style=" background: #0005f0;font-size: 18px; color:white;
+box-shadow : 0px 0px 20px 10px #0005f0" class="blink"><b>
+𝓜𝓮𝓷𝓰𝓾𝓬𝓪𝓹𝓴𝓪𝓷 𝓢𝓮𝓵𝓪𝓶𝓪𝓽 </b></text>🔸<br></br>
+
+<text style=" background: #0005f0;font-size: 14px; color:white;
+box-shadow : 0px 0px 20px 10px #0005f0" class="blink">
+<b>𝓜𝓮𝓷𝓾𝓷𝓪𝓲𝓴𝓪𝓷 𝓘𝓫𝓪𝓭𝓪𝓱 𝓟𝓾𝓪𝓼𝓪 1442 H</b></text>
+</center>
+<br>
+<div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+
+<a href="#" class="btn tombol-voucher hijau" role="button" id="btnvcr" onclick="voucher()"><span class="glyphicon glyphicon-tags"></span> &nbsp; VOUCHER</a>
+<a href="#" class="btn tombol-member hijau" role="button" id="btnmem" onclick="member()"><span class="glyphicon glyphicon-user"></span>&nbsp; MEMBER</a>
+<a href="#" class="btn tombol-qr hijau" role="button" onclick="window.location='https://laksa19.github.io/myqr';"><span class="glyphicon glyphicon-qrcode"></span>&nbsp; SCAN QR</a>
+</div>
+		
+<form autocomplete="off" name="login" action="$(link-login-only)" method="post" 
+$(if chap-id) onSubmit="return doLogin()" $(endif)>
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+
+<input type="text" onkeyup="this.value = this.value.tolowercase();" 
+class="form-control kolom-inputdsuser" name="username" type="text" value="$(username)" placeholder="MASUKKAN KODE VOUCHER" /> 
+ 
+<input type="hidden" onkeyup="this.value = this.value.tolowercase();" 
+class="form-control kolom-inputdspass" name="password" type="hidden" placeholder="PASSWORD" /> 
+
+$(if trial == 'yes')
+<a type="button" class="btn tombol-khusus hijau" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+<b><span class="glyphicon glyphicon-leaf"></span>&nbsp; COBA GRATIS </b></a>
+
+$(endif)	
+<button class="btn tombol-login" type="submit">
+<b><span class="glyphicon glyphicon-off"></span>&nbsp; LOGIN</b></button>
+</form>	
+<br>
+<div id="gaya">
+  <p>
+<font style="background: #0005f0;color: white; padding: 3px;box-shadow : 0px 0px 20px 10px #0005f0; font-size: 15px;font-weight: bold" class="blink">
+  panduan & informasi </font></br><br>
+<font style="background: #0005f0;border-radius: 1px;color: white;font-weight: bold; padding: 1px; font-size: 15px;box-shadow : 0px 0px 20px 10px #0005f0" class="blink">
+( klik_disini ) </font></br>👇👇👇 </br></font>
+<a href="login.html">
+<img src="img/menu.png" style="border-radius: 10px; width:100%; max-width:75px; height:auto;">
+</img></a><br></p>
+<marquee style="background: green;font-family: 'fantasy'; font-size: 15px; font-weight: bold; color:white; box-shadow : 0px 0px 10px 5px green;
+border-radius :0px 0px 15px 15px; border: 2px solid red">
+🔸 Gunakan internet hostpot dengan bijak 🔸 dan jangan lupa untuk beristirahat 🔸 </marquee>
+</div>
+</div>
+
+	<div class="col-8"><br>
+<img style="padding:10px;">
+<img src="img/banner2.jpg" alt="vinesa" style="width:100%; max-width: 607px; height:auto"/>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<center>
+		<font style="font-family : Arial; background: white; color: green; font-size: 12px font-weight: bold">
+			<b>Copyright virnie cellular &copy; 2021</b></font>
+</center>
+
+
+$(if chap-id)
+		<form name="sendin" action="$(link-login-only)" method="post">
+			<input type="hidden" name="username" />
+			<input type="hidden" name="password" />
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+		</form>
+		<script type="text/javascript" src="md5.js"></script>
+		<script type="text/javascript">
+		<!--
+			function doLogin() {
+			document.sendin.username.value = document.login.username.value;
+			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+			document.sendin.submit();
+			return false;
+			}
+		//-->
+		</script>
+		$(endif)
+		
+</div>
+<script type="text/javascript">
+
+    var username = document.login.username;
+    var password = document.login.password;
+    var luser = document.getElementById("luser");
+    var lpass = document.getElementById("lpass");
+    var btnmem = document.getElementById("btnmem");
+    var btnvcr = document.getElementById("btnvcr");
+
+    // set password = username
+    function setpass() {
+      var user = username.value
+      password.value = user;
+    }
+
+    username.onkeyup = setpass;
+
+
+    // change to voucher mode
+    function voucher() {
+      username.focus();
+      username.onkeyup = setpass;
+      username.placeholder = "MASUKKAN KODE VOUCHER";
+      password.type = "hidden";
+      password.value = username.value;
+    }
+
+    // change to member mode
+    function member() {
+      username.focus();
+      username.onkeyup = "";
+      username.placeholder = "USERNAME";
+      password.type = "PASSWORD";
+      password.value = "";
+
+    }
+
+    //-->
+  </script>
+  
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
