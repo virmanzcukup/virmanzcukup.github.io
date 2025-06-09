@@ -75,6 +75,33 @@ $("#confirm").show();
         mainColor: "#5b0785", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
         alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
     };
-	
-	
-	
+
+
+<style>
+/* WhatsApp-style tweak */
+.intergram-container {
+  border-radius: 15px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.intergram-chat-header {
+  background-color: #075E54 !important; /* WhatsApp green */
+  color: white !important;
+  font-weight: bold;
+}
+
+.intergram-chat-msg {
+  border-radius: 10px;
+  background-color: #dcf8c6 !important;
+  padding: 8px;
+  margin: 5px 0;
+  font-size: 14px;
+  max-width: 90%;
+}
+
+.intergram-chat-msg.user {
+  background-color: #fff !important;
+  align-self: flex-end;
+}
+</style>
