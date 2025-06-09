@@ -309,65 +309,100 @@ border: 2px solid yellow;
 	.shalat-label{display:inline-block;
 	margin-bottom:.5rem;
 		 }
-/* WhatsApp Style untuk Intergram */
 
+/* ======== INTERGRAM WA-STYLE FIXED ======== */
+
+/* Container keseluruhan */
 .intergram-container {
-  border-radius: 15px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  overflow: hidden !important;
 }
 
-/* Header Chat */
+/* Header ala WA */
 .intergram-chat-header {
-  background-color: #075E54 !important; /* Hijau WhatsApp */
+  background-color: #075E54 !important;
   color: #fff !important;
-  font-weight: bold;
-  font-size: 16px;
   padding: 12px;
-}
-
-/* Bubble pesan dari CS */
-.intergram-chat-msg {
-  background-color: #dcf8c6 !important; /* Hijau muda */
-  color: #000;
-  border-radius: 10px;
-  padding: 8px 12px;
-  margin: 6px;
-  max-width: 85%;
-  font-size: 14px;
-  line-height: 1.4em;
-}
-
-/* Bubble pesan dari user */
-.intergram-chat-msg.user {
-  background-color: #ffffff !important;
-  align-self: flex-end;
-  color: #000;
-}
-
-/* Input Message */
-.intergram-chat-input {
-  font-size: 14px;
-}
-
-/* Tombol kirim */
-.intergram-send-btn {
-  background-color: #25D366 !important; /* Tombol kirim WA */
-  color: #fff !important;
+  font-size: 16px;
   font-weight: bold;
 }
 
-/* Tombol kecil bulat */
-.intergram-floating-button {
-  background-color: #25D366 !important;
-  border-radius: 50% !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+/* Pesan dari visitor */
+.intergram-chat-msg.user {
+  background-color: #DCF8C6 !important;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 8px;
+  align-self: flex-end;
+  margin: 4px 8px;
+  max-width: 75%;
+  word-break: break-word;
 }
 
-/* Tooltip saat loading atau auto-response */
+/* Pesan dari admin/bot */
+.intergram-chat-msg {
+  background-color: #ffffff !important;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px 8px 8px 0;
+  align-self: flex-start;
+  margin: 4px 8px;
+  max-width: 75%;
+  word-break: break-word;
+}
+
+/* Input dan tombol kirim */
+.intergram-chat-input-area {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 8px;
+  background: #f0f0f0;
+  align-items: center;
+}
+
+.intergram-chat-input {
+  flex-grow: 1;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-right: 6px;
+}
+
+.intergram-send-btn {
+  background-color: #25D366 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.intergram-send-btn:hover {
+  background-color: #1ebc59 !important;
+}
+
+/* Auto response */
 .intergram-auto-response {
   font-style: italic;
-  color: #666;
+  font-size: 13px;
+  color: #999;
+  margin: 4px 8px;
+}
+
+/* Floating button style */
+.intergram-floating-button {
+  background-color: #25D366 !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 	
 #created-by {Copyright <!--Tolong jangan di hapus tanpa se ijin pemilik-->virnie cellular
