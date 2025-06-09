@@ -93,7 +93,19 @@ $(if chap-id) onSubmit="return doLogin()" $(endif) style="padding:5px;">
 
 </div>
 <br>
-	<audio src="musik.mp3" controls loop></audio>
+	<div class="musik-player">
+  <label for="playlist"><b>🎵 Pilih Musik:</b></label>
+  <select id="playlist" onchange="gantiLagu()">
+    <option value="musik1.mp3">Lagu 1 - Santai Dulu</option>
+    <option value="musik2.mp3">Lagu 2 - Fokus Voucher</option>
+    <option value="musik3.mp3">Lagu 3 - Waktunya Tidur</option>
+  </select>
+  <br><br>
+  <audio id="player" controls autoplay loop>
+    <source src="musik1.mp3" type="audio/mp3">
+    Browser kamu nggak mendukung audio, bro.
+  </audio>
+</div>
 <!--end div -->
 </div>
 
@@ -228,7 +240,15 @@ $(if chap-id)
 		//-->
 		</script>
 		$(endif)
-		
+	<script>
+  function gantiLagu() {
+    var player = document.getElementById("player");
+    var playlist = document.getElementById("playlist");
+    var laguBaru = playlist.value;
+    player.src = laguBaru;
+    player.play();
+  }
+</script>	
 <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
 <script src="js/signup.js" type="text/javascript"></script>
 <script src="js/login.js" type="text/javascript"></script>
