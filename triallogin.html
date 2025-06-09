@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Hotspot</title>
+  <link rel="icon" href="img/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white min-h-screen flex flex-col justify-between">  <!-- Marquee -->  <div class="bg-blue-600 text-white py-2">
+    <marquee>🔸 Gunakan internet hotspot dengan bijak 🔸 Jangan lupa istirahat 🔸</marquee>
+  </div>  <!-- Main Login Form -->  <main class="flex-grow flex items-center justify-center px-4">
+    <div class="bg-white shadow-xl rounded-xl p-8 max-w-md w-full text-center space-y-6">
+      <img src="img/logo.png" alt="Logo" class="w-20 h-20 mx-auto mb-4" />
+      <h1 class="text-xl font-bold">Login Hotspot</h1>
+      <form name="login" action="$(link-login-only)" method="post" class="space-y-4" autocomplete="off" onsubmit="return doLogin()">
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" /><input type="text" name="username" placeholder="Masukkan ID" required
+           class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+           onkeyup="this.value = this.value.toLowerCase();">
+    <input type="hidden" name="password" value="" required />
+
+    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+      <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+  </form>
+
+  <div class="flex justify-between">
+    <a href="status.html" class="text-blue-500 hover:underline">Gratis 3 Menit</a>
+    <a href="#" onclick="document.getElementById('hargaModal').showModal()" class="text-blue-500 hover:underline">Lihat Harga</a>
+  </div>
+
+  <div class="flex justify-between">
+    <a href="panduan.html" class="text-sm text-gray-600 hover:underline">Petunjuk</a>
+    <a href="registrasi.html" class="text-sm text-gray-600 hover:underline">Registrasi</a>
+  </div>
+</div>
+
+  </main>  <!-- Footer -->  <footer class="text-center text-sm py-4 bg-gray-100">
+    Created by VC.net
+  </footer>  <!-- Modal Harga -->  <dialog id="hargaModal" class="rounded-md p-6 w-full max-w-md bg-white shadow-lg">
+    <h2 class="text-lg font-bold mb-4">Harga Voucher</h2>
+    <ul class="space-y-2 text-left">
+      <li><b>Rp. 2000</b> - 3 Jam / 1 Hari</li>
+      <li><b>Rp. 3000</b> - 5 Jam / 1 Hari</li>
+      <li><b>Rp. 4000</b> - 12 Jam / 1 Hari</li>
+      <li><b>Rp. 6000</b> - 24 Jam / 2 Hari</li>
+    </ul>
+    <button onclick="hargaModal.close()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Tutup</button>
+  </dialog>  <!-- CHAP Script -->$(if chap-id)
+
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
+  <script src="md5.js"></script>
+  <script>
+    function doLogin() {
+      document.sendin.username.value = document.login.username.value;
+      document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+      document.sendin.submit();
+      return false;
+    }
+  </script>
+  $(endif)</body>
+</html>
