@@ -102,14 +102,45 @@ $(if chap-id) onSubmit="return doLogin()" $(endif) style="padding:5px;">
   <option value="musik2.mp3" selected>Ada Ban - Jalan cahaya</option>
   <option value="musik3.mp3">Ada Ban - Masih adakah cinta</option>
 </select>
+<br>
 
+<div id="nowPlaying" style="margin-top:5px; font-weight:bold;"></div>
+		
 <!-- Pemutar Musik -->
 <audio id="player" controls autoplay loop={false}>
   <source src="musik2.mp3" type="audio/mpeg">
   Browser kamu tidak mendukung audio HTML5.
 </audio>
 
-<div id="nowPlaying" style="margin-top:5px; font-weight:bold;"></div>
+<!-- Script Playlist -->
+<script>
+  const player = document.getElementById('player');
+  const playlist = document.getElementById('playlist');
+  const nowPlaying = document.getElementById('nowPlaying');
+
+  function updateNowPlaying() {
+    nowPlaying.textContent = '🎵 Sedang Diputar: ' + playlist.options[playlist.selectedIndex].text;
+  }
+
+  playlist.addEventListener('change', function () {
+    player.src = this.value;
+    player.play();
+    updateNowPlaying();
+  });
+
+  player.addEventListener('ended', function () {
+    const currentIndex = playlist.selectedIndex;
+    const nextIndex = (currentIndex + 1) % playlist.options.length;
+    playlist.selectedIndex = nextIndex;
+    player.src = playlist.value;
+    player.play();
+    updateNowPlaying();
+  });
+
+  // Tampilkan lagu saat pertama kali dimuat
+  window.onload = updateNowPlaying;
+</script>
+		
 <!--end div -->
 </div>
 
@@ -245,34 +276,7 @@ $(if chap-id)
 		</script>
 		$(endif)
 	
-	<!-- Script Playlist -->
-<script>
-  const player = document.getElementById('player');
-  const playlist = document.getElementById('playlist');
-  const nowPlaying = document.getElementById('nowPlaying');
 
-  function updateNowPlaying() {
-    nowPlaying.textContent = '🎵 Sedang Diputar: ' + playlist.options[playlist.selectedIndex].text;
-  }
-
-  playlist.addEventListener('change', function () {
-    player.src = this.value;
-    player.play();
-    updateNowPlaying();
-  });
-
-  player.addEventListener('ended', function () {
-    const currentIndex = playlist.selectedIndex;
-    const nextIndex = (currentIndex + 1) % playlist.options.length;
-    playlist.selectedIndex = nextIndex;
-    player.src = playlist.value;
-    player.play();
-    updateNowPlaying();
-  });
-
-  // Tampilkan lagu saat pertama kali dimuat
-  window.onload = updateNowPlaying;
-</script>
 	
 <script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
 <script src="js/signup.js" type="text/javascript"></script>
