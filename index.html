@@ -94,20 +94,22 @@ $(if chap-id) onSubmit="return doLogin()" $(endif) style="padding:5px;">
 </div>
 <br>
 	<!-- Playlist Musik -->
+	<div class="musik-player">
+  <label for="playlist"><b>🎵 Pilih Musik:</b></label>
+		
 <select id="playlist">
   <option value="musik1.mp3">Ada Ban - Pura pura cinta</option>
-  <option value="musik2.mp3">Ada Ban - Jalan Cahaya</option>
+  <option value="musik2.mp3" selected>Ada Ban - Jalan cahaya</option>
   <option value="musik3.mp3">Ada Ban - Masih adakah cinta</option>
 </select>
-<div id="nowPlaying" style="margin-top:5px; font-weight:bold;"></div>
 
 <!-- Pemutar Musik -->
 <audio id="player" controls autoplay loop={false}>
-  <source src="lagu2.mp3" type="audio/mpeg">
+  <source src="musik2.mp3" type="audio/mpeg">
   Browser kamu tidak mendukung audio HTML5.
 </audio>
 
-
+<div id="nowPlaying" style="margin-top:5px; font-weight:bold;"></div>
 <!--end div -->
 </div>
 
