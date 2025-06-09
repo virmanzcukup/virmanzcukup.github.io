@@ -308,34 +308,67 @@ border: 2px solid yellow;
 	
 	.shalat-label{display:inline-block;
 	margin-bottom:.5rem;
-	}
-/* WhatsApp-style tweak */
+		 }
+/* WhatsApp Style untuk Intergram */
+
 .intergram-container {
   border-radius: 15px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
+/* Header Chat */
 .intergram-chat-header {
-  background-color: #075E54 !important; /* WhatsApp green */
-  color: white !important;
+  background-color: #075E54 !important; /* Hijau WhatsApp */
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+}
+
+/* Bubble pesan dari CS */
+.intergram-chat-msg {
+  background-color: #dcf8c6 !important; /* Hijau muda */
+  color: #000;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 6px;
+  max-width: 85%;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+/* Bubble pesan dari user */
+.intergram-chat-msg.user {
+  background-color: #ffffff !important;
+  align-self: flex-end;
+  color: #000;
+}
+
+/* Input Message */
+.intergram-chat-input {
+  font-size: 14px;
+}
+
+/* Tombol kirim */
+.intergram-send-btn {
+  background-color: #25D366 !important; /* Tombol kirim WA */
+  color: #fff !important;
   font-weight: bold;
 }
 
-.intergram-chat-msg {
-  border-radius: 10px;
-  background-color: #dcf8c6 !important;
-  padding: 8px;
-  margin: 5px 0;
-  font-size: 14px;
-  max-width: 90%;
+/* Tombol kecil bulat */
+.intergram-floating-button {
+  background-color: #25D366 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
-.intergram-chat-msg.user {
-  background-color: #fff !important;
-  align-self: flex-end;
+/* Tooltip saat loading atau auto-response */
+.intergram-auto-response {
+  font-style: italic;
+  color: #666;
 }
-
 	
 #created-by {Copyright <!--Tolong jangan di hapus tanpa se ijin pemilik-->virnie cellular
 <!--jika di hapus saya akan denda--> &copy; 2021}
