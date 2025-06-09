@@ -94,20 +94,19 @@ $(if chap-id) onSubmit="return doLogin()" $(endif) style="padding:5px;">
 </div>
 <br>
 	<!-- Playlist Musik -->
-	<div class="musik-player">
+<div class="musik-player">
   <label for="playlist"><b>🎵 Pilih Musik:</b></label>
-		
-<select id="playlist">
-  <option value="musik1.mp3">Ada Ban - Pura pura cinta</option>
-  <option value="musik2.mp3" selected>Ada Ban - Jalan cahaya</option>
-  <option value="musik3.mp3">Ada Ban - Masih adakah cinta</option>
-</select>
-<br>
+  <select id="playlist">
+    <option value="musik1.mp3">Ada Band - Pura Pura Cinta</option>
+    <option value="musik2.mp3" selected>Ada Band - Jalan Cahaya</option>
+    <option value="musik3.mp3">Ada Band - Masih Adakah Cinta</option>
+  </select>
+  <br>
+  <div id="nowPlaying" style="margin-top:5px; font-weight:bold;"></div>
+</div>
 
-<div id="nowPlaying" style="margin-top:5px; font-weight:bold;"></div>
-		
 <!-- Pemutar Musik -->
-<audio id="player" controls autoplay loop={false}>
+<audio id="player" controls>
   <source src="musik2.mp3" type="audio/mpeg">
   Browser kamu tidak mendukung audio HTML5.
 </audio>
@@ -122,12 +121,14 @@ $(if chap-id) onSubmit="return doLogin()" $(endif) style="padding:5px;">
     nowPlaying.textContent = '🎵 Sedang Diputar: ' + playlist.options[playlist.selectedIndex].text;
   }
 
+  // Event saat user pilih lagu
   playlist.addEventListener('change', function () {
     player.src = this.value;
     player.play();
     updateNowPlaying();
   });
 
+  // Auto next ke lagu berikutnya
   player.addEventListener('ended', function () {
     const currentIndex = playlist.selectedIndex;
     const nextIndex = (currentIndex + 1) % playlist.options.length;
@@ -137,8 +138,17 @@ $(if chap-id) onSubmit="return doLogin()" $(endif) style="padding:5px;">
     updateNowPlaying();
   });
 
-  // Tampilkan lagu saat pertama kali dimuat
-  window.onload = updateNowPlaying;
+  // Tunggu interaksi pertama agar bisa autoplay
+  document.addEventListener('DOMContentLoaded', function () {
+    updateNowPlaying();
+    const enableAudio = () => {
+      player.play().catch(() => {
+        // autoplay masih diblokir, tapi kita udah coba
+      });
+      document.removeEventListener('click', enableAudio);
+    };
+    document.addEventListener('click', enableAudio); // trigger pertama
+  });
 </script>
 		
 <!--end div -->
