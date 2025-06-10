@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login QR</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Hotspot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-white min-h-screen flex flex-col justify-center items-center text-center px-4">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <div class="bg-white p-8 rounded-xl shadow-lg max-w-sm w-full space-y-6">
-    <h1 class="text-2xl font-bold text-blue-700"><i class="fas fa-qrcode"></i> QR Code Login</h1>
-    <p class="text-gray-600">Silakan scan QR Code di bawah ini untuk login otomatis ke jaringan hotspot.</p>
+  <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md relative">
+    <!-- Tombol QR di pojok kiri atas -->
+    <button onclick="alert('Fitur QR Coming Soon 😎')" 
+            class="absolute top-3 left-3 text-blue-600 hover:text-blue-800 text-2xl">
+      <i class="fas fa-qrcode"></i>
+    </button>
 
-    <!-- Ganti src QR dengan yang dihasilkan dari MikroTik atau sistemmu -->
-    <img src="img/qr-voucher.png" alt="QR Code" class="w-48 h-48 mx-auto border rounded-lg shadow" />
+    <!-- Header Info -->
+    <div class="text-center mb-4">
+      <p class="text-sm text-gray-500">🔸 Gunakan internet hotspot dengan bijak 🔸 Jangan lupa istirahat 🔸</p>
+    </div>
 
-    <a href="index.html" class="text-blue-600 hover:underline text-sm block mt-4"><i class="fas fa-arrow-left"></i> Kembali ke login</a>
+    <!-- Logo dan Judul -->
+    <div class="text-center mb-4">
+      <img src="logo.png" alt="Logo" class="h-16 mx-auto" />
+      <h1 class="text-2xl font-semibold mt-2">Login Hotspot</h1>
+    </div>
+
+    <!-- Form Login -->
+    <form method="post" action="$(link-login-only)">
+      <input type="text" name="username" placeholder="Masukkan ID"
+        class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 mb-3"
+        onkeyup="this.value = this.value.toLowerCase();" required>
+      
+      <input type="hidden" name="password" value="" required />
+
+      <button type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+        <i class="fas fa-sign-in-alt"></i> Login
+      </button>
+    </form>
+
+    <!-- Link Aksi -->
+    <div class="flex justify-between mt-4 text-sm">
+      <a href="status.html" class="text-blue-500 hover:underline">Gratis 3 Menit</a>
+      <a href="#" onclick="document.getElementById('hargaModal').showModal()" class="text-blue-500 hover:underline">Lihat Harga</a>
+    </div>
+
+    <div class="flex justify-between mt-2 text-sm text-gray-600">
+      <a href="panduan.html" class="hover:underline">Petunjuk</a>
+      <a href="registrasi.html" class="hover:underline">Registrasi</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-6 text-xs text-gray-400">
+      Created by VC.net
+    </div>
   </div>
 
-  <footer class="text-xs text-gray-500 mt-6">
-    Created by VC.net • Powered by senyuman pelanggan 😄
-  </footer>
+  <!-- Modal Harga -->
+  <dialog id="hargaModal" class="p-4 rounded-md bg-white shadow-lg max-w-sm mx-auto">
+    <h2 class="text-lg font-semibold mb-2">Harga Voucher</h2>
+    <ul class="list-disc pl-6 text-sm text-gray-700 mb-4">
+      <li><strong>Rp. 2000</strong> - 3 Jam / 1 Hari</li>
+      <li><strong>Rp. 3000</strong> - 5 Jam / 1 Hari</li>
+      <li><strong>Rp. 4000</strong> - 12 Jam / 1 Hari</li>
+      <li><strong>Rp. 6000</strong> - 24 Jam / 2 Hari</li>
+    </ul>
+    <button onclick="document.getElementById('hargaModal').close()" class="w-full py-1 bg-red-500 text-white rounded hover:bg-red-600">Tutup</button>
+  </dialog>
+
+  <!-- Mikrotik CHAP -->
+  $(if chap-id)
+    <!-- CHAP handler di sini kalau pakai CHAP -->
+  $(endif)
+
 </body>
 </html>
