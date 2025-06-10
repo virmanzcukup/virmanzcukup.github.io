@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jam Analog Jakarta</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center; to
+      background: #f1f3f5;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .clock-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border: 8px solid #fff;
+      border-radius: 50%;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .number {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 1rem;
+      transform: rotate(calc(var(--i) * 30deg));
+    }
+
+    .number span {
+      display: inline-block;
+      transform: rotate(calc(var(--i) * -30deg));
+    }
+
+    .hand {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      background: #333;
+    }
+
+    .hour {
+      width: 6px;
+      height: 70px;
+      background: #333;
+      z-index: 3;
+    }
+
+    .minute {
+      width: 4px;
+      height: 100px;
+      background: #333;
+      z-index: 2;
+    }
+
+    .second {
+      width: 2px;
+      height: 120px;
+      background: #007bff;
+      z-index: 1;
+    }
+
+    .center-dot {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #333;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+
+    .info {
+      margin-top: 2rem;
+    }
+
+    .info h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .info p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock-container" id="clock">
+    <div class="number" style="--i:1"><span>1</span></div>
+    <div class="number" style="--i:2"><span>2</span></div>
+    <div class="number" style="--i:3"><span>3</span></div>
+    <div class="number" style="--i:4"><span>4</span></div>
+    <div class="number" style="--i:5"><span>5</span></div>
+    <div class="number" style="--i:6"><span>6</span></div>
+    <div class="number" style="--i:7"><span>7</span></div>
+    <div class="number" style="--i:8"><span>8</span></div>
+    <div class="number" style="--i:9"><span>9</span></div>
+    <div class="number" style="--i:10"><span>10</span></div>
+    <div class="number" style="--i:11"><span>11</span></div>
+    <div class="number" style="--i:12"><span>12</span></div>
+
+    <div class="hand hour" id="hourHand"></div>
+    <div class="hand minute" id="minuteHand"></div>
+    <div class="hand second" id="secondHand"></div>
+    <div class="center-dot"></div>
+  </div>
+
+  <div class="info">
+    <h2>Jakarta</h2>
+    <p id="dateText"></p>
+    <p id="timeText"></p>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours();
+
+      const secondDeg = seconds * 6;
+      const minuteDeg = minutes * 6 + seconds * 0.1;
+      const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+
+      document.getElementById('secondHand').style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+      document.getElementById('minuteHand').style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+      document.getElementById('hourHand').style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+
+      const options = { weekday: 'short', day: 'numeric', month: 'short' };
+      const localeDate = now.toLocaleDateString('id-ID', options);
+      document.getElementById('dateText').textContent = `Hari ini | ${localeDate}`;
+
+      const timeText = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', hour12: false });
+      document.getElementById('timeText').textContent = timeText;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
