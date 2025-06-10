@@ -11,7 +11,7 @@
 
   <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md relative">
     <!-- Tombol QR di pojok kiri atas -->
-    <button onclick="alert('Fitur QR Coming Soon 😎')" 
+    <button onclick="alert('Scan QR Coming Soon 😎')" 
             class="absolute top-3 left-3 text-blue-600 hover:text-blue-800 text-2xl">
       <i class="fas fa-qrcode"></i>
     </button>
@@ -21,18 +21,21 @@
       <p class="text-sm text-gray-500">🔸 Gunakan internet hotspot dengan bijak 🔸 Jangan lupa istirahat 🔸</p>
     </div>
 
-    <!-- Logo dan Judul -->
+    <!-- Logo / Judul -->
     <div class="text-center mb-4">
-      <img src="logo.png" alt="Logo" class="h-16 mx-auto" />
-      <h1 class="text-2xl font-semibold mt-2">Login Hotspot</h1>
+      <!-- Ganti logo.png sesuai lokasi file logo -->
+      <!-- <img src="logo.png" alt="Logo" class="h-16 mx-auto" /> -->
+      <h1 class="text-3xl font-bold">VC<span class="text-sm align-top">.NET</span></h1>
     </div>
+
+    <h2 class="text-center text-xl font-semibold mb-4">Login Hotspot</h2>
 
     <!-- Form Login -->
     <form method="post" action="$(link-login-only)">
       <input type="text" name="username" placeholder="Masukkan ID"
         class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 mb-3"
         onkeyup="this.value = this.value.toLowerCase();" required>
-      
+
       <input type="hidden" name="password" value="" required />
 
       <button type="submit"
@@ -70,10 +73,12 @@
     <button onclick="document.getElementById('hargaModal').close()" class="w-full py-1 bg-red-500 text-white rounded hover:bg-red-600">Tutup</button>
   </dialog>
 
-  <!-- Mikrotik CHAP -->
+  <!-- Ini hanya akan aktif jika digunakan di server MikroTik -->
+  <!--
   $(if chap-id)
-    <!-- CHAP handler di sini kalau pakai CHAP -->
+    // CHAP handler
   $(endif)
+  -->
 
 </body>
 </html>
